@@ -1,0 +1,122 @@
+* { margin: 0px; padding: 0px;}
+ul { list-style-type: none;}
+li { list-style: none;}
+a { text-decoration: none; color: white;}
+
+
+header {
+    width: 100%;
+    height: 121px;
+    padding: 0;
+    background-color: #F6F5F0;
+    border-bottom: 1px solid lightgray;
+}
+header .inner {
+    width: 1100px;
+    margin: 0 auto;
+}
+header .inner #logo {
+    width: 75px; height: 75px;
+    float: left;  
+    margin: 23px 0;
+}
+
+/* top-menu */
+header .inner .top-menu{
+    float: right;
+    margin: 14px 0;
+    cursor: pointer;
+}
+header .inner .top-menu li {
+    float: left;
+    padding: 9px;
+    font-size: 12.8px;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif,sans-serif;
+    color: rgb(93, 92, 92);
+    
+}
+header .inner .top-menu button {
+    width: 34px; height: 34px;
+    border-radius: 4px;
+    background-color: white;
+}
+header .inner .top-menu li:nth-child(2n) { color: rgb(224, 223, 223);}
+header .inner .top-menu li:nth-child(2n+1):hover { color: black;}
+
+/* main-menu */
+header .inner .main-menu{
+    float: right;
+    cursor: pointer;
+}
+header .inner .main-menu .title {
+    height: 27px;
+    padding: 12px 20px 20px;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif,sans-serif;
+}
+header .inner .main-menu .menu-item {
+    float: left;
+}
+header .inner .main-menu .menu-item:hover .title { 
+    background-color: #2C2A29;
+    color: #669900;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+/* drop-container */
+header .main-menu .menu-item .drop-container {
+    width: 100%;
+    display: none;
+    position: fixed;
+    left: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+header .main-menu .menu-item:hover .drop-container {
+    display: block;
+    z-index: 1;
+}
+
+/* drop-menu */
+header .main-menu .menu-item .drop-container .drop-menu {
+    background-color: #2C2A29;
+
+}
+header .main-menu .menu-item .drop-container .drop-menu .inner {
+    display: flex;
+}
+header .main-menu .menu-item .drop-container .drop-menu .inner .item {
+    margin: 20px 0;
+    width: 220px;
+}
+header .main-menu .menu-item .drop-container .drop-menu .inner .item h3 {
+    color:white;
+    font-weight: 100;
+    font-size: 14px;
+    padding: 3px 0 12px 0;
+}
+header .main-menu .menu-item .drop-container .drop-menu .inner .item li {
+    color:#8b8b8b;
+    font-size: 12.8px;
+    padding: 5px 0;
+    word-spacing: 0px;
+}
+header .main-menu .menu-item .drop-container .drop-menu .inner .item li:hover { color:#669900}
+
+/* drop-text */
+header .main-menu .menu-item .drop-container .drop-text {
+    padding: 25px 0;
+    background-image: url(img/drop-text.png);
+}
+header .main-menu .menu-item .drop-container .drop-text h4 {
+    color: #8b8b8b;
+    font-size: 13px;
+    font-weight: 200;
+}
+header .main-menu .menu-item .drop-container .drop-text p {
+    color: #669900;
+    font-size: 12.8px;
+    padding: 4px 0 13px 0;
+}
+
