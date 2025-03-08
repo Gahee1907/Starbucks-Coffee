@@ -107,7 +107,7 @@ header .main-menu .menu-item .drop-container .drop-menu .inner .item li:hover { 
 /* drop-text */
 header .main-menu .menu-item .drop-container .drop-text {
     padding: 25px 0;
-    background-image: url(img/drop-text.png);
+    background-image: url(img/main_menu_pattern.jpg);
 }
 header .main-menu .menu-item .drop-container .drop-text h4 {
     color: #8b8b8b;
@@ -120,3 +120,98 @@ header .main-menu .menu-item .drop-container .drop-text p {
     padding: 4px 0 13px 0;
 }
 
+/* main */
+main { 
+    width: 100%;
+}
+main .screen {
+    height: 640px;
+    margin-top: 122px;
+    background-image: url(img/visual_bg.jpg);
+}
+main .screen .inner {
+    position: relative;
+    height: 640px;
+}
+
+main .screen .inner .title {
+    position: absolute;
+    width: 470px;
+    height: 231px;
+    top: 80px;
+    left: 0;
+}
+main .screen .inner .look {
+    color: color(srgb 0.3493 0.1669 0.0932); 
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    text-align: center;
+    padding: 11px 0;
+    width: 130px;
+    border: 2px solid color(srgb 0.3493 0.1669 0.0932);
+    border-radius: 4px;
+    position: relative;
+    top: 340px;
+    left: 170px;
+    cursor: pointer;   
+}
+main .screen .inner .look:hover {
+    background-color: color(srgb 0.3493 0.1669 0.0932);
+    color: white;
+    transition-duration: 0.7s;
+}
+main .screen .inner .cup1_text {
+    position: absolute;
+    top: 20px;
+    right: 165px;
+}
+main .screen .inner .cup1_img{
+    position: absolute;
+    top: 53px;
+    right: -55px;
+}
+main .screen .inner .cup2_text {
+    position: absolute;
+    bottom: 220px;
+    left: 432px;
+}
+main .screen .inner .cup2_img{
+    position: absolute;
+    top: 124px;
+    right: 160px;
+}
+main .screen .inner .spoon {
+    position: absolute;
+    bottom: 0;
+    left: 280px;
+}
+
+/* notice */
+main .notice {
+    width: 100%;
+    height: 60px;
+    background-color: #2C2A29;
+    font-size: 13px;
+    font-family: 'Courier New', Courier, monospace;
+}
+main .notice .inner {
+    color: white;
+    display: flex;
+}
+main .notice .inner h2 {
+    width: 100px;
+    text-align: center;
+    padding: 19px 0;
+}
+main .notice .inner .slide li {
+    float: left;
+    padding: 19px 0;
+}
+main .notice .inner img {
+    background-color: white;
+    border-radius: 50%;
+    width: 23px;
+    height: 23px;
+    padding: 4px;
+    margin: 14px 0;
+}
