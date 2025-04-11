@@ -250,10 +250,11 @@ main .notice .inner .right h2 {
     color:#2C2A29;
     margin: 19px 0;
 }
-main .notice .inner .right img {
+main .notice .inner .right .btn {
     width: 30px;
     height: 30px;
     padding: 15px;
+    cursor: pointer;
 } 
 
 /* notice swiper */
@@ -274,23 +275,31 @@ section {
     width: 100%;
     height: 650px;
     background-color: #f6f5ef;
+    position: relative;
 }
 section .swiper {
-    padding-top: 25px ;
+    width: 100%;
+    height: 630px;
     overflow: hidden;
+    transition: height .4s;
+}
+section .swiper.hide {
+    height: 0;
 }
 section .swiper .swiper-wrapper {
-    height: 600px;
-    width: 1300px;
-}
+    display: flex;
+    align-items: center;
+  }
 section .swiper-slide {
     width: 818px;
-    padding: 0 7px;
+    height: 550px;
     opacity: 0.4;
-}
+    position: relative;
+    transition: opacity 0.4s;
+  }
 section .swiper-slide a {
     position: absolute;
-    bottom: 35px; left: 0; right: 0;
+    bottom: 0; left: 0; right: 0;
     width: 84px;
     font-family:Arial, Helvetica, sans-serif;
     font-weight: 600;
@@ -308,7 +317,7 @@ section .swiper-slide a:hover {
     transition-duration: 0.5s;
 }
 section .swiper-slide-active {
-    width: 818px;
+
     opacity: 1;
 }
 section .swiper-slide-prev {
@@ -319,7 +328,19 @@ section .swiper-slide .swiper-slide-next {
 }
 
 section .swiper .swiper-pagination {
-   
+    position: absolute;
+}
+section .swiper .swiper-pagination .swiper-pagination-bullet {
+    background-color: transparent;
+    background-image: url(img/promotion_slide_pager.png);
+    width: 13px;
+    height: 12px;
+    margin-right: 6px;
+    outline: none;
+    opacity: 1;
+}
+section .swiper .swiper-pagination .swiper-pagination-bullet-active {
+    background-image: url(img/promotion_slide_pager_on.png);
 }
 
 section .swiper-button-prev {
@@ -447,27 +468,15 @@ article .inner .login h2:hover {
 .season_product {
     width: 100%;
     height: 400px;
-    background-image: url(img/season_product_bg.jpg);
+    background: url(img/season_product_bg.jpg);
 }
 .season_product .inner {
     position: relative;
 }
 .season_product .inner .season1 {
-    position: relative;
-    animation: fadeInLeft 3s;
-
+    position: absolute;
+    left: 0;
 }
-@keyframes fadeInLeft {
-    0% {
-        opacity: 0;
-        fransform: trnaslate3d(-100%,0,0);
-    }
-    to{
-        opacity: 1;
-        trnasform: trnaslateZ(0);
-    }
-}
-
 .season_product .inner .season2 {
     position: absolute;
     right: 330px;
@@ -478,6 +487,7 @@ article .inner .login h2:hover {
     right: 105px;
     top: 180px;
 }
+
 .season_product .inner a {
     position: absolute;
     right: 476px;
@@ -493,6 +503,7 @@ article .inner .login h2:hover {
     background-color: #2C2A29;
     transition-duration: 0.4s;
 }
+
 
 
 /* reserve */
@@ -537,10 +548,64 @@ article .inner .login h2:hover {
 
 /* favorite */
 .favorite {
-    width: 100%;
-    height: 708px;
+    height: 706px;
+    background-attachment: fixed;
     background-image: url(img/favorite_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+.favorite .inner {
+    padding: 110px 0;
+    position: relative;
+}
+.favorite .inner .favorite_1 {
+    position: absolute;
+    left: 200px;
+}
+.favorite .inner .favorite_2 {
+    position: absolute;
+    left: 90px;
+    top: 350px;
+}
+.favorite .inner a {
+    border: 2px solid white;
+    border-radius: 4px;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 11px 25px;
+    position: absolute;
+    left: 320px;
+    top: 530px;
+}
+.favorite .inner a:hover {
+    background-color: white;
+    color: #2C2A29;
+    transition: 0.5s ease;
+} 
+
+/* logo_store */
+.logo_store {
+    width: 100%;
+    height: 600px;
+    background-attachment: fixed;
+     background-image: url(img/reserve_store_bg.jpg);
+     background-repeat: no-repeat;
+     background-size: cover;
+}
+.logo_store .inner {
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo_store .inner img {
+    width: 340px;
+    height: 340px;
+}  
+.logo_store .inner img:hover {
+    background-image: url(img/reserve_store_medal_back.png);
+} 
+
 
 /* find_store */
 .find_store {
@@ -695,3 +760,21 @@ footer .inner .info5 {
     margin-top: 30px;
     text-align: center;
 }
+
+/*
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 9;
+  width: 42px;
+  height: 42px;
+  background-color: #333;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+*/

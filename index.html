@@ -9,12 +9,19 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
+    <!-- GSAP Core -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <!-- ScrollTrigger Plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+
     <!-- js -->
     <script defer src="main.js"></script>
+    <script defer src="animation.js"></script>
 
-    <!-- AOS 라이브러리-->
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+    <!-- jquery -->
+     <script src="./jquery-3.7.1.min.js"></script>
 
     <title>Starbucks Coffee Korea</title>
 </head>
@@ -36,10 +43,10 @@
 
             <ul class="main-menu">
                 <li class="menu-item">
-                    <p class="title">COFFEE</p>
+                    <div class="title">COFFEE</div>
                     <div class="drop-container">
                         <div class="drop-menu">
-                            <div class="inner">
+                            <ul class="inner">
                                 <ul class="item">
                                     <h3>커피</h3>
                                     <li>스타벅스 원두</li>
@@ -72,7 +79,7 @@
                                     <li>커피 메이커</li>
                                     <li>리저브를 매장에서 다양하게 즐기는 법</li>
                                 </ul>
-                            </div> 
+                            </ul> 
                         </div> 
                         <div class="drop-text">
                             <div class="inner">
@@ -86,7 +93,7 @@
                 </li>
 
                 <li class="menu-item">
-                   <p class="title">MENU</p> 
+                   <div class="title">MENU</div> 
                    <div class="drop-container">
                     <div class="drop-menu">
                         <div class="inner">
@@ -144,7 +151,7 @@
                 </div>
                 </li>
                 <li class="menu-item">
-                    <p class="title">STORE</p>
+                    <div class="title">STORE</div>
                     <div class="drop-container">
                         <div class="drop-menu">
                             <div class="inner">
@@ -173,7 +180,7 @@
                     </div>
                 </li>
                 <li class="menu-item">
-                   <p class="title">RESPONSIBILITY</p>
+                   <div class="title">RESPONSIBILITY</div>
                    <div class="drop-container">
                     <div class="drop-menu">
                         <div class="inner">
@@ -215,7 +222,7 @@
                 </div>
                 </li>
                 <li class="menu-item">
-                   <p class="title">MY STARBUCKS REWARDS</p> 
+                   <div class="title">MY STARBUCKS REWARDS</div> 
                    <div class="drop-container">
                     <div class="drop-menu">
                         <div class="inner">
@@ -252,7 +259,7 @@
                 </div>
                 </li>
                 <li class="menu-item">
-                   <p class="title">WHAT'S NEW</p>
+                   <div class="title">WHAT'S NEW</div>
                    <div class="drop-container">
                     <div class="drop-menu">
                         <div class="inner">
@@ -288,8 +295,7 @@
                         </div>
                     </div>
                 </div>
-                </li>
-            </ul>
+            </li>
         </div>
     </head>
 
@@ -322,7 +328,7 @@
                     <img src="img/plus.png">
                 </div>
                     <div class="right">
-                       <h2>스타벅스 프로모션</h2>
+                        <h2>스타벅스 프로모션</h2>
                         <img  class="btn" src="img/—Pngtree—vector upward arrow icon_4184601.png">
                     </div>
             </div>
@@ -352,12 +358,14 @@
                 <a href="#">자세히 보기</a>
               </div>
             </div>
-            <!-- pagination -->
-            <div class="swiper-pagination"></div>
-      
+
             <!-- navigation buttons -->
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
+
+            <!-- pagination -->
+            <div class="swiper-pagination"></div>
+    
           </div>   
     </section>
 
@@ -404,9 +412,16 @@
 
     <div class="favorite">
         <div class="inner">
-            <img src="img/favorite_text1.png">
-            <img src="img/favorite_text2.png">
+            <img class="favorite_1" src="img/favorite_text1.png">
+            <img class="favorite_2" src="img/favorite_text2.png">
+            <a href="#">자세히 보기</a>
         </div>
+    </div>
+
+    <div class="logo_store">
+        <div class="inner">
+            <img src="img/reserve_store_medal_front.png">
+        </div>  
     </div>
 
     <div class="find_store">
