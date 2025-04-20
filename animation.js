@@ -1,6 +1,6 @@
 gsap.registerPlugin(ScrollTrigger);
 
-// 👉 공통 설정 함수
+//  왼쪽에서 오른쪽으로 이동하는 함수
 function animateFromRight(selectorList) {
     gsap.utils.toArray(selectorList).forEach((el, i) => {
       gsap.fromTo(el,
@@ -9,7 +9,7 @@ function animateFromRight(selectorList) {
           scrollTrigger: {
             trigger: el,
             start: "top 80%",
-            toggleActions: "play none resume none" // 👈 내려올 때만 다시 재생
+            toggleActions: "play none resume none" // 내려올 때만 다시 재생
           },
           x: 0,
           opacity: 1,
@@ -22,7 +22,8 @@ function animateFromRight(selectorList) {
     });
   }
 
-  function animateFromLeft(selectorList) {
+  // 오른쪽에서 왼쪽으로 이동하는 함수
+function animateFromLeft(selectorList) {
     gsap.utils.toArray(selectorList).forEach((el, i) => {
       gsap.fromTo(el,
         { x: -100, opacity: 0 },
@@ -30,7 +31,7 @@ function animateFromRight(selectorList) {
           scrollTrigger: {
             trigger: el,
             start: "top 80%",
-            toggleActions: "play none resume none" // 👈 내려올 때만 다시 재생
+            toggleActions: "play none resume none" // 내려올 때만 다시 재생
           },
           x: 0,
           opacity: 1,

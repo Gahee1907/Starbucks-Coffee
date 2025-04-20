@@ -19,7 +19,7 @@
 /* section swiper */
 window.addEventListener("load", () => {
   new Swiper(".swiper", {
-    slidesPerView: 3,
+    slidesPerView: "auto",
     spaceBetween: 10,
     centeredSlides: true,
     loop: true,
@@ -76,5 +76,17 @@ promotionbtn.addEventListener('click', function(){
     promotion.classList.add('hide');
   }else {
     promotion.classList.remove('hide');
+  }
+})
+
+
+let badge = document.querySelector(".badges")
+
+window.addEventListener('scroll', function() {
+  let value = this.window.scrollY
+  console.log("scrollY", value);
+
+  if(value > 400){
+    badge.style.animation = 'disappear 2s ease-out';
   }
 })

@@ -72,6 +72,7 @@ header .main-menu .menu-item .drop-container {
     position: fixed;
     left: 0;
     font-family: 'Courier New', Courier, monospace;
+    z-index: 3;
 }
 header .main-menu .menu-item:hover .drop-container {
     display: block;
@@ -123,7 +124,34 @@ header .main-menu .menu-item .drop-container .drop-text p {
 /* main */
 main { 
     width: 100%;
+    position: relative;
 }
+
+/*  badges */
+main .badges {
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    right: 10px;
+    top: 15px;
+    position: fixed;
+    margin-top: 121px;
+}
+main .badges img {
+    border-radius: 10px;
+    margin: 5px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.17);
+}
+@keyframe disappear {
+    from {
+        opacity:1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+/* screen */
 main .screen {
     height: 640px;
     margin-top: 122px;
@@ -133,7 +161,6 @@ main .screen .inner {
     position: relative;
     height: 640px;
 }
-
 main .screen .inner .title {
     position: absolute;
     width: 470px;
@@ -273,7 +300,6 @@ main .notice .inner .left .swiper-container .swiper-slide {
 /* section */
 section {
     width: 100%;
-    height: 650px;
     background-color: #f6f5ef;
     position: relative;
 }
@@ -283,7 +309,7 @@ section .swiper {
     overflow: hidden;
     transition: height .4s;
 }
-section .swiper.hide {
+section .hide {
     height: 0;
 }
 section .swiper .swiper-wrapper {
@@ -418,7 +444,7 @@ article .inner .login h2:hover {
 .video {
     width: 100%;
     height: 700px;
-    background-image: url(img/video_cover_pattern.png);
+    background-image: url("https://flamboyant-lumiere-482a1e.netlify.app/images/video_cover_pattern.png"),url(img/video_cover_pattern.png);
 }
 .video .inner{
     position: relative;
