@@ -23,12 +23,10 @@ window.addEventListener("load", () => {
     spaceBetween: 10,
     centeredSlides: true,
     loop: true,
-    loopedSlides: 5, // 복제 슬라이드를 명시적으로 설정
-    loopAdditionalSlides: 5, // 추가 복제 슬라이드 설정
   
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: "section .swiper-button-next",
+      prevEl: "section .swiper-button-prev",
     },
     pagination: {
       el: ".swiper-pagination",
@@ -36,11 +34,7 @@ window.addEventListener("load", () => {
     },
     autoplay: {
       delay: 5000,
-      disableOnInteraction: false,
     },
-    observer: true,
-    observeParents: true,
-    loopPreventsSlide: false, // 경고 방지
   });
 });
 
@@ -57,9 +51,12 @@ var swiper3 = new Swiper(".awards_swiper", {
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
-    type: 'bullets', // 👉 이거 명시해줘야 의도대로 동작
-  }
-  ,  
+    type: 'bullets', 
+  },
+  navigation: {
+    nextEl: ".awards_swiper .swiper-button-next",
+    prevEl: ".awards_swiper .swiper-button-prev",
+  },  
   autoplay: {
     delay: 7000, // 3초마다 자동 재생
     disableOnInteraction: false // 사용자 상호 작용 후에도 자동 재생 유지
@@ -80,13 +77,12 @@ promotionbtn.addEventListener('click', function(){
 })
 
 
-let badge = document.querySelector(".badges")
+//topbtn
+function clickme() {
+  window.scrollTo({top: 0, left: 0, behavior: "smooth"});
+}
 
-window.addEventListener('scroll', function() {
-  let value = this.window.scrollY
-  console.log("scrollY", value);
-
-  if(value > 400){
-    badge.style.animation = 'disappear 2s ease-out';
-  }
-})
+function changeToInput() {
+  document.querySelector('search').style.display= 'none';
+  document.getElementById('Input').style.display = 'block';
+}

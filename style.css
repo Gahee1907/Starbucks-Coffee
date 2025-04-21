@@ -4,6 +4,21 @@ li { list-style: none;}
 a { text-decoration: none; color: white;}
 
 
+.upbtn {
+    top: 90%; left: 96%; width: 45px; height: 45px;
+    border-radius: 20%; background-color:#2C2A29;
+    border: white 2px solid;
+    position: fixed; z-index: 2;
+    cursor:pointer;
+    color: white; font-size: 20px;
+}
+.search {
+    padding: 5px 8px; background-color: white;
+    border-radius: 10%;
+    border: 1px solid rgb(198, 196, 196);
+    font-size: 15px; cursor:pointer;
+} 
+
 header {
     width: 100%;
     height: 121px;
@@ -51,7 +66,7 @@ header .inner .main-menu{
 }
 header .inner .main-menu .title {
     height: 27px;
-    padding: 12px 20px 20px;
+    padding: 12px 20px 18px;
     font-size: 13px;
     font-family: Arial, Helvetica, sans-serif,sans-serif;
 }
@@ -129,28 +144,19 @@ main {
 
 /*  badges */
 main .badges {
-    position: absolute;
     z-index: 1;
-    display: flex;
-    flex-direction: column;
     right: 10px;
     top: 15px;
     position: fixed;
     margin-top: 121px;
+    width: 140px;
 }
 main .badges img {
     border-radius: 10px;
     margin: 5px;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.17);
 }
-@keyframe disappear {
-    from {
-        opacity:1;
-    }
-    to {
-        opacity: 0;
-    }
-}
+
 /* screen */
 main .screen {
     height: 640px;
@@ -305,7 +311,7 @@ section {
 }
 section .swiper {
     width: 100%;
-    height: 630px;
+    height: 620px;
     overflow: hidden;
     transition: height .4s;
 }
@@ -322,6 +328,8 @@ section .swiper-slide {
     opacity: 0.4;
     position: relative;
     transition: opacity 0.4s;
+    display: flex;
+    justify-content: center;
   }
 section .swiper-slide a {
     position: absolute;
@@ -370,15 +378,42 @@ section .swiper .swiper-pagination .swiper-pagination-bullet-active {
 }
 
 section .swiper-button-prev {
+    font-size: 30px;
     position: absolute;
-    top: 310px;
-    left: 270px;
+    top: 310px; left: 270px;
+    color: #2C2A29;
+    border: 2px solid #2C2A29;
+    border-radius: 50%;
+    padding: 2px 9px 0px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .4s;
+    outline: none;
 }
 section .swiper-button-next {
+    font-size: 30px;
     position: absolute;
-    top: 310px;
-    right: 270px;
+    top: 310px; right: 270px;
+    color: #2C2A29;
+    border: 2px solid #2C2A29;
+    border-radius: 50%;
+    padding: 2px 9px 0px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .4s;
+    outline: none;
 }
+section .swiper-button-prev::after,
+section .swiper-button-next::after { display: none;}
+section .swiper-button-prev:hover,
+section .swiper-button-next:hover {
+    color: white; background-color: #2C2A29;
+}
+
 
 /* article */
 article {
@@ -696,22 +731,57 @@ article .inner .login h2:hover {
 /* slider */
 .slider {
     width: 100%;
-    height: 120px;
+    height: 124px;
     background-color: color(srgb 0.1529 0.1529 0.153);
 
 }
 .slider .inner {
     position:relative;
+    height: 130px;
 }
 .slider .inner .awards_swiper {
-    height: 120px;
-
-    
-}
-.slider .inner .awards_swiper .swiper-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    width: 1100px;
     overflow: hidden;
 }
-
+.slider .inner .awards_swiper .swiper-button-prev {
+    font-size: 30px;
+    position: absolute;
+    top: 310px; left: 270px;
+    color: #2C2A29;
+    border: 2px solid #2C2A29;
+    border-radius: 50%;
+    padding: 2px 9px 0px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .4s;
+    outline: none;
+}
+.slider .inner .awards_swiper .swiper-button-next {
+    font-size: 30px;
+    position: absolute;
+    top: 310px; right: 270px;
+    color: #2C2A29;
+    border: 2px solid #2C2A29;
+    border-radius: 50%;
+    padding: 2px 9px 0px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .4s;
+    outline: none;
+}
+ .awards_swiper .swiper-button-prev::after,
+ .awards_swiper .swiper-button-next::after { display: none;}
+ .awards_swiper .swiper-button-prev:hover,
+ .awards_swiper .swiper-button-next:hover {
+    color: white; background-color: #2C2A29;
+}
 
 /* footer */
 footer {

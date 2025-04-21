@@ -25,7 +25,7 @@
     <title>Starbucks Coffee Korea</title>
 </head>
 <body>
-
+    <input class="upbtn" type="button" value="⬆" onclick="clickme()">
     <header>
         <div class="inner">
             <a href="index.html"><img id="logo" src="img/starbucks_logo.png"></a>
@@ -37,7 +37,8 @@
                 <li>Customer Service & Idea</li>
                 <li>|</li>
                 <li>Find a Store</li>
-                <button><i class="fa-sharp fa-light fa-magnifying-glass" style="color: #000000;"></i></button>
+                <input class="search" type="button" value="🔍" onclick="changeToInput()">
+                <input type="text" id="Input" style="display: none;">
             </ul>
 
             <ul class="main-menu">
@@ -365,8 +366,8 @@
             </div>
 
             <!-- navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev">⬅</div>
+            <div class="swiper-button-next">⮕</div>
 
             <!-- pagination -->
             <div class="swiper-pagination"></div>
@@ -480,6 +481,7 @@
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
             </div>
+        </div>
     </div>
 
     <footer>

@@ -59,3 +59,23 @@ function animateFromLeft(selectorList) {
   // find_store 요소
   animateFromRight([".store_text1", ".store_text2",".find_store .inner a"]);
   animateFromLeft([".store_pic1", ".store_pic2"]);
+
+
+  //badge
+let badge = document.querySelector(".badges")
+
+window.addEventListener('scroll', function() {
+  let value = this.window.scrollY
+
+  if(value > 450){
+    gsap.to(badge, {
+      opacity: 0, display: 'none'
+    });
+  }
+  else {
+    gsap.to(badge, {
+      opacity: 1, display: 'block'
+    });
+  }
+
+});
