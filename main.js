@@ -1,6 +1,6 @@
 /* notice swiper */
 
-    var swiper1 = new Swiper(".notice .swiper-container", {
+  var swiper1 = new Swiper(".notice .swiper-container", {
     direction: "vertical", // 방향
     slidesPerView : 'auto',  // 화면에 보여질 슬라이드의 갯수(숫자도 가능)
     slidesPerGroup : 1, // 그룹으로 묶을 슬라이드의 갯수 (slidePerView와 같으면 좋음)
