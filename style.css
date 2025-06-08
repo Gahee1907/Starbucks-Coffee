@@ -160,12 +160,13 @@ main .badges img {
 /* screen */
 main .screen {
     height: 640px;
-    margin-top: 122px;
     background-image: url(img/visual_bg.jpg);
 }
 main .screen .inner {
     position: relative;
     height: 640px;
+    width: 1200px;
+    margin: 0 auto;
 }
 main .screen .inner .title {
     position: absolute;
@@ -256,7 +257,7 @@ main .notice .inner .left {
     justify-items: center;
 }
 main .notice .inner .left h2 {
-    width: 100px;
+    width: 300px;
     text-align: center;
     margin: 18px 0;
     font-weight: 400;
@@ -275,7 +276,7 @@ main .notice .inner .left img {
 main .notice .inner .right {
     width: 100%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     background-color: #f6f5ef;
     text-align: center;
 }
@@ -421,11 +422,14 @@ article {
     height: 241px;
     position: relative;
 }
-
+article .inner {
+    width: 1100px;
+    margin: 0 auto;
+}
 article .inner .rewards_left {
     width: 50%;
     height: 241px;
-    background-color: #2C2A29;
+    background-color: #272727;
     position: absolute;
     left: 0;
     z-index: -1;
@@ -482,6 +486,8 @@ article .inner .login h2:hover {
     background-image: url("https://flamboyant-lumiere-482a1e.netlify.app/images/video_cover_pattern.png"),url(img/video_cover_pattern.png);
 }
 .video .inner{
+    width: 1200px;
+    margin: 0 auto;
     position: relative;
 }
 
@@ -532,6 +538,8 @@ article .inner .login h2:hover {
     background: url(img/season_product_bg.jpg);
 }
 .season_product .inner {
+    width: 1200px;
+    margin: 0 auto;
     position: relative;
 }
 .season_product .inner .season1 {
@@ -574,6 +582,8 @@ article .inner .login h2:hover {
     background-image: url(img/reserve_bg.jpg);
 }
 .reserve .inner {
+    width: 1200px;
+    margin: 0 auto;
     position: relative;
 }
 .reserve .inner .reserve_coffee {
@@ -616,6 +626,8 @@ article .inner .login h2:hover {
     background-size: cover;
 }
 .favorite .inner {
+    width: 1200px;
+    margin: 0 auto;
     padding: 110px 0;
     position: relative;
 }
@@ -663,9 +675,18 @@ article .inner .login h2:hover {
     width: 340px;
     height: 340px;
 }  
-.logo_store .inner img:hover {
-    background-image: url(img/reserve_store_medal_back.png);
-} 
+.logo_store .inner .medal_back {
+    transform: rotateY(-180deg);
+}
+
+.medal_front, .medal_back {
+    position: absolute;
+    transition: 1s;
+    backface-visibility: hidden;
+}
+.logo_store .inner .medal_back {
+    transform: rotateY(-180deg);
+}
 
 
 /* find_store */
@@ -675,6 +696,8 @@ article .inner .login h2:hover {
     background-image: url(img/find_store_bg.jpg);
 }
 .find_store .inner {
+    width: 1200px;
+    margin: 0 auto;
     position: relative;
 }
 .find_store .inner .store_pic1 {
@@ -736,6 +759,8 @@ article .inner .login h2:hover {
 
 }
 .slider .inner {
+    width: 1200px;
+    margin: 0 auto;
     position:relative;
     height: 130px;
 }
