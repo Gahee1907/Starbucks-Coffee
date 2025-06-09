@@ -43,9 +43,8 @@ window.addEventListener("load", () => {
 /* footer awards swiper */
 var swiper3 = new Swiper(".awards_swiper", {
   slidesPerView: 5, // 한 번에 표시할 슬라이드 수
-  spaceBetween: 20, // 슬라이드 간의 간격  
+  spaceBetween: 40, // 슬라이드 간의 간격  
   centeredSlides: true, //슬라이드 가운데 정렬
-  loopedSlides: 5,
   loop: true, // 슬라이드 루프(무한 회전) 활성화
 
   pagination: {

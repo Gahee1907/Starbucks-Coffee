@@ -61,7 +61,7 @@ function animateFromLeft(selectorList) {
   animateFromLeft([".store_pic1", ".store_pic2"]);
 
 
-  //badge
+//badge
 let badge = document.querySelector(".badges")
 
 window.addEventListener('scroll', function() {
